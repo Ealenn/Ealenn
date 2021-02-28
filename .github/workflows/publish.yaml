@@ -9,7 +9,10 @@ jobs:
   publish-on-remote:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
+    - name: Checkout repository and submodules
+      uses: actions/checkout@v2
+      with:
+        submodules: recursive
     - name: Build
       uses: jakejarvis/hugo-build-action@v0.80.0
       with:
