@@ -18,7 +18,7 @@ An DNS sinkhole that protects your devices from unwanted content, without instal
 
 An DNS querie is used to convert a web address (duckduckgo.com) by an IP address usable by your computer (40.114.177.156)
 
-{{< img src="/posts/raspberry/dns-sinkhole/diagram/dns-query.png" height="342" width="246" align="center" >}}
+{{<img src="/posts/raspberry/dns-sinkhole/diagram/dns-query.png" height="342" width="246" align="center" >}}
 
 DNS-Sinkhole is placed between the DNS server, and your client (Computer, TV, tablet, phone etc ...) Depending on the configuration of your DNS-Sinkhole, it can accept the request, or refuse it, based on DNS-Sinkhole List.
 
