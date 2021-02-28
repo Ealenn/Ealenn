@@ -1,0 +1,63 @@
+section:
+  name: Projects
+  id: projects
+  enable: true
+  weight: 3
+  showOnNavbar: true
+  hideTitle: false
+
+# buttons:
+# - name: All
+#   filter: "all"
+
+projects:
+
+- name: Echo-Server
+  logo: /images/sections/projects/echo-server.png
+  role: Maintainer
+  timeline: "2019 - Present"
+  repo: https://github.com/Ealenn/Echo-Server
+  url: https://ealenn.github.io/Echo-Server
+  summary: An echo server is a server that replicates the request sent by the client and sends it back.
+  tags: ["tools"]
+
+- name: Templates .NET Core
+  logo: /images/sections/projects/templates-dotnetcore.png
+  role: Maintainer
+  timeline: "2020 - Present"
+  repo: https://github.com/Ealenn/templates-dotnet
+  summary: .NET Templates with GitHub Actions, Docker and more (API / Jobs / Console / ML) 
+  tags: ["tools"]
+
+- name: Rock Paper Scissors
+  logo: /images/sections/projects/rps.png
+  role: Maintainer
+  timeline: "2018"
+  repo: https://github.com/Ealenn/rock-paper-scissors-socket
+  url: https://rock-paper-scissors-socket.herokuapp.com
+  summary: Socket implementation of Rock Paper Scissors game for real time gameplay.
+  tags: ["hobby"]
+
+- name: Bitnami Charts
+  logo: /images/sections/projects/bitnami.png
+  role: Contributor
+  timeline: "2020 - Present"
+  repo: https://github.com/bitnami/charts
+  summary: Popular applications, ready to launch on Kubernetes using Kubernetes Helm.
+  tags: ["hobby"]
+
+- name: Nocode
+  logo: /images/sections/projects/no-code.png
+  role: Nothing
+  timeline: "2019 - Present"
+  repo: https://github.com/kelseyhightower/nocode
+  summary: The best way to write secure and reliable applications. Write nothing; deploy nowhere.
+  tags: ["hobby", "fun"]
+
+- name: AdGuard-Home-List
+  logo: /images/sections/projects/adguard-home-list.png
+  role: Maintainer
+  timeline: "2021 - Present"
+  repo: https://github.com/Ealenn/AdGuard-Home-List
+  summary: Varied and carefully selected filter lists and consolidates for use in AdGuard Home.
+  tags: ["hobby", "tools"]

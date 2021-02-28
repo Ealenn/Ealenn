@@ -1,0 +1,45 @@
+baseURL: https://ealen.dev
+
+languageCode: en-us
+title: "Ealen's Blog"
+theme: "toha"
+
+# Manage languages
+# For any more details, you can check the official documentation: https://gohugo.io/content-management/multilingual/
+languages:
+  en:
+    languageName: English
+    weight: 1
+
+# Force a locale to be use, really useful to develop the application ! Should be commented in production, the "weight" should rocks.
+DefaultContentLanguage: en
+
+# Allow raw html in markdown file
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  tableOfContents:
+    startLevel: 2
+    endLevel: 6
+    ordered: false
+
+# Enable Google Analytics
+googleAnalytics: G-Y39TSSYB9X
+
+# Enable global emoji support
+enableEmoji: true
+
+# Site parameters
+params:
+  background: /images/site/background.jpg
+  logo:
+    main: /images/site/main-logo.png
+    inverted: /images/site/inverted-logo.png
+    favicon: /images/site/favicon.png
+
+  gitRepo: https://github.com/Ealenn/Ealenn
+  enableBlogPost: true
+  enableTOC: true
+  newsletter:
+    enable: false

@@ -1,0 +1,39 @@
+name: Publish
+
+on:
+  push:
+    branches:
+      - "master"
+
+jobs:
+  publish-on-remote:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Build
+      uses: jakejarvis/hugo-build-action@v0.80.0
+      with:
+        args: --minify
+    - name: Stop
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.REMOTE_HOST }}
+        username: ${{ secrets.REMOTE_USER }}
+        password: ${{ secrets.REMOTE_PASSWORD }}
+        script: docker-compose -f ${{ secrets.REMOTE_COMPOSE }} down -v 
+    - name: Copy files
+      uses: appleboy/scp-action@master
+      with:
+        host: ${{ secrets.REMOTE_HOST }}
+        username: ${{ secrets.REMOTE_USER }}
+        password: ${{ secrets.REMOTE_PASSWORD }}
+        source: "./public/*"
+        target: ${{ secrets.REMOTE_TARGET }}
+        rm: true
+    - name: Start
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.REMOTE_HOST }}
+        username: ${{ secrets.REMOTE_USER }}
+        password: ${{ secrets.REMOTE_PASSWORD }}
+        script: docker-compose -f ${{ secrets.REMOTE_COMPOSE }} up -d

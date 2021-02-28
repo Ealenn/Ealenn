@@ -1,0 +1,12 @@
+name: Check Hugo Build
+on: [pull_request]
+
+jobs:
+  check-hugo-build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Build
+      uses: jakejarvis/hugo-build-action@v0.80.0
+      with:
+        args: --minify --buildDrafts
