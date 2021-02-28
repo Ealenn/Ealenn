@@ -1,0 +1,48 @@
+section:
+  name: Experiences
+  id: experiences
+  enable: true
+  weight: 4
+  showOnNavbar: true
+  hideTitle: false 
+
+experiences:
+- company:
+    name: Ubisoft
+    url: "https://www.ubisoft.com"
+    location: Bordeaux
+    overview: Ubisoft Entertainment SA is a French video game company with several development studios across the world. Its video game franchises include Rayman, Raving Rabbids, Prince of Persia, Assassin's Creed, Far Cry, Watch Dogs, Just Dance, and the Tom Clancy's series. As of March 2018, Ubisoft is the fourth largest publicly traded game company in the Americas and Europe in terms of revenue and market capitalisation, after Activision Blizzard, Electronic Arts and Take-Two Interactive. 
+  positions:
+  - designation: Online Software Engineer
+    start: Feb 2021
+    responsibilities:
+    - Implementation of continuous integration and deployment processes
+    - TypeScript - GitLab - Docker
+
+- company:
+    name: Netfective Technology
+    url: "https://www.bluage.com"
+    location: Bordeaux
+    overview: Digital transformation, Blu Age, Application modernization, Software modernization, Code migration, Infrastructure virtualization, Mainframe modernization.
+  positions:
+  - designation: Lead Software Engineer
+    start: 2020
+    end: 2021
+    responsibilities:
+    - Architecture of new services
+    - Implementation of continuous integration and deployment processes
+    - .NET Core, CQRS/ES, RabbitMQ, Kafka, IdentityServer4, Docker
+
+- company:
+    name: Orange Business Services
+    url: "https://www.orange-business.com"
+    location: Bordeaux (Pessac)
+    overview: Orange Business Services, the business services arm of Orange S.A., is a global integrator of communications products and services for multinational corporations.
+  positions:
+  - designation: DevOps Engineer
+    start: 2019
+    end: 2020
+    responsibilities:
+    - Orange / SACe - MyPlace - Azure Kubernetes Service (AKS), Traefik, Kong, Blob Storage, .NetCore, Coravel, MediatR, Helm, DockerInDocker, Kind, Artifactory, Azure DevOps
+    - Banque Casino / CDiscount - CashBack - Azure Kubernetes Service (AKS), Blob Storage, Active Directory, CosmoDB, .NetCore, Akka.net (Akkatecture). Terraform, Gitlab & DockerInDocker.
+    - Gamification - Orange DataShare - NodeJS, Sequelize & tests, Docker & Charts Helm, API Gateway Kong Kubernetes / GKE, OAuth (via JWT)

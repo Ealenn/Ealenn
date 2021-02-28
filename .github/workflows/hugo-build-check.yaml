@@ -1,0 +1,15 @@
+name: Check Hugo Build
+on: [pull_request]
+
+jobs:
+  check-hugo-build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository and submodules
+      uses: actions/checkout@v2
+      with:
+        submodules: recursive
+    - name: Build
+      uses: jakejarvis/hugo-build-action@v0.80.0
+      with:
+        args: --minify --buildDrafts
