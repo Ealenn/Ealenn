@@ -1,0 +1,96 @@
+<!doctype html><html><head><title>DNS sinkhole, between Privacy and AdBlocker, configuration and feedback</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="ie=edge"><link rel=stylesheet href=/css/bootstrap.min.css><link rel=stylesheet href=/css/layouts/main.css><link rel=stylesheet href=/css/style.css><link rel=stylesheet href=/css/navigators/navbar.css><link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel=stylesheet><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css><link rel=icon type=image/png href=/images/site/favicon_hucfb824843c4f4113270da96ead535ce1_5638_42x0_resize_box_2.png><link rel=stylesheet href=/css/style.css><meta name=description content="An DNS sinkhole that protects your devices from unwanted content, without installing any client-side software."><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css><link rel=stylesheet href=/css/layouts/single.css><link rel=stylesheet href=/css/navigators/sidebar.css><script type=application/javascript>var doNotTrack=false;if(!doNotTrack){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;ga('create','G-Y39TSSYB9X','auto');ga('send','pageview');}</script><script async src=https://www.google-analytics.com/analytics.js></script></head><body data-spy=scroll data-target=#TableOfContents data-offset=80><div class="container-fluid bg-dimmed wrapper"><nav class="navbar navbar-expand-xl top-navbar final-navbar shadow"><div class=container><button class="navbar-toggler navbar-light" id=sidebar-toggler type=button onclick=toggleSidebar()>
+<span class=navbar-toggler-icon></span></button>
+<a class=navbar-brand href=/><img src=/images/site/main-logo_huea7ec95f2c2fe9a67b35c3c43b5d9933_30968_42x0_resize_box_2.png>Ealen's Blog</a>
+<button class="navbar-toggler navbar-light" id=toc-toggler type=button onclick=toggleTOC()>
+<span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse lang-selector" id=top-nav-items><ul class="navbar-nav ml-auto"></ul></div></div><img src=/images/site/main-logo_huea7ec95f2c2fe9a67b35c3c43b5d9933_30968_42x0_resize_box_2.png class=d-none id=main-logo>
+<img src=/images/site/inverted-logo_hu561b1c2b7fb8ec8a12c51a48d696c5e6_18657_42x0_resize_box_2.png class=d-none id=inverted-logo></nav><section class=sidebar-section id=sidebar-section><div class=sidebar-holder><div class=sidebar id=sidebar><input type=text placeholder=Search data-search id=search-box><div class=sidebar-tree><ul class=tree id=tree><li id=list-heading><a href=/posts data-filter=all>Posts</a></li><div class=subtree><li><i class="fas fa-minus-circle"></i><a class=active href=/posts/raspberry/>Raspberry</a><ul class=active><li><a class=active href=/posts/raspberry/dns-sinkhole/>DNS-Sinkhole</a></li></ul></li></div></ul></div></div></div></section><section class=content-section id=content-section><div class=content><div class="container p-0 read-area"><div class="hero-area col-sm-12" id=hero-area style=background-image:url(https://ealen.dev/posts/raspberry/dns-sinkhole/hero.jpg)></div><div class=page-content><div class="author-profile ml-auto align-self-lg-center"><img class=rounded-circle src=/images/author/rudy.jpg><h5 class=author-name>Rudy Marchandise</h5><p>January 2, 2021</p></div><div class=title><h1>DNS sinkhole, between Privacy and AdBlocker, configuration and feedback</h1></div><div class=post-content id=post-content><p>An DNS sinkhole that protects your devices from unwanted content, without installing any client-side software.</p><h2 id=presentation>Presentation</h2><h3 id=filter-your-dns-queries>Filter your DNS queries</h3><p>An DNS querie is used to convert a web address (duckduckgo.com) by an IP address usable by your computer (40.114.177.156)</p><img src=/posts/raspberry/dns-sinkhole/diagram/dns-query.png width=246 height=342 class=center><p>DNS-Sinkhole is placed between the DNS server, and your client (Computer, TV, tablet, phone etc &mldr;) Depending on the configuration of your DNS-Sinkhole, it can accept the request, or refuse it, based on DNS-Sinkhole List.</p><div class=row><div class="col col-sm-12 col-lg-6"><img src=./diagram/allow-list.png alt></p><hr></div><div class="col col-sm-12 col-lg-6"><img src=./diagram/block-list.png alt></div></div><blockquote><p><img src=./diagram/app.png alt> DNS-Sinkhole
+<img src=./diagram/configuration-file.png alt> DNS-Sinkhole List
+<img src=./diagram/dns.png alt> DNS Server
+<img src=./diagram/arrow-blue.png alt> DNS-Sinkhole Request/Response
+<img src=./diagram/arrow-red.png alt> DNS Request/Response</p></blockquote><h4 id=dns-sinkhole-list>DNS-Sinkhole List</h4><p>Here is a sample of DNS-Sinkhole List</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>amptrack.dailymail.co.uk <span style=color:#75715e>#DailyMail Tracker</span>
+analytics.gandi.net <span style=color:#75715e>#Gandi</span>
+analytics.yahoo.com <span style=color:#75715e>#Yahoo</span>
+arc.msn.com <span style=color:#75715e>#Microsoft</span>
+areyouahuman.com <span style=color:#75715e>#Are You A Human</span>
+atdmt.com <span style=color:#75715e>#Facebook</span>
+<span style=color:#75715e>#...</span>
+</code></pre></div><p>By default the DNS-Sinkhole uses their own list, but you can add a lot of them, simply with a search on github.</p><p>I share my lists on a GitHub <a href=https://github.com/Ealenn/AdGuard-Home-List>Ealenn/AdGuard-Home-List</a>. <strong>This list can easily be used in corporate.</strong> This is the list that is configured in my home, and I use every day. It brings together the most famous lists.</p><p>Once you have AdGuard Home ready and are logged in, use its main menu to add one blocklist and one allowlist.</p><p>BlockList :</p><ul><li><a href=https://raw.githubusercontent.com/Ealenn/AdGuard-Home-List/gh-pages/AdGuard-Home-List.Block.txt>https://raw.githubusercontent.com/Ealenn/AdGuard-Home-List/gh-pages/AdGuard-Home-List.Block.txt</a></li></ul><p>AllowList :</p><ul><li><a href=https://raw.githubusercontent.com/Ealenn/AdGuard-Home-List/gh-pages/AdGuard-Home-List.Allow.txt>https://raw.githubusercontent.com/Ealenn/AdGuard-Home-List/gh-pages/AdGuard-Home-List.Allow.txt</a></li></ul><h3 id=redundancy-of-dns-servers>Redundancy of DNS servers</h3><p>Another advantage is the multiplication of DNS servers available. If an DNS server is no longer accessible, for example your internet service provider, you switch to another automatically.</p><blockquote><p>Example, in case of DDoS cyberattack <a href=https://en.wikipedia.org/wiki/2016_Dyn_cyberattack>as in 2016 with Dyn</a>, Dyn is not accessible, but CloudFlare is up ! More recently in 2018 with the French internet service provider Free, and they national DNS breakdown.</p></blockquote><img src=/posts/raspberry/dns-sinkhole/diagram/multiple-dns.png width=437 height=352 class=center><p>Personally I use :</p><ul><li>Cloudflare, the fastest DNS resolver on Earth</li><li>Google</li><li>Cisco Open DNS</li></ul><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh><span style=color:#75715e># AdGuard</span>
+94.140.14.14
+94.140.15.15
+https://dns.adguard.com/dns-query
+tls://dns.adguard.com
+<span style=color:#75715e># Cloudflare DNS</span>
+1.1.1.1
+1.0.0.1
+https://dns.cloudflare.com/dns-query
+tls://1.1.1.1
+<span style=color:#75715e># Google</span>
+8.8.8.8
+8.8.4.4
+https://dns.google/dns-query
+tls://dns.google
+<span style=color:#75715e># Cisco OpenDNS</span>
+208.67.222.222
+208.67.220.220
+https://doh.opendns.com/dns-query
+<span style=color:#75715e># Dyn DNS</span>
+216.146.35.35
+216.146.36.36
+</code></pre></div><h2 id=concretely>Concretely</h2><h3 id=open-source-leaders>Open Source Leaders</h3><h4 id=pi-hole>Pi-Hole</h4><p><img src="https://img.shields.io/github/last-commit/pi-hole/pi-hole?style=flat-square" alt="GitHub last commit">
+<img src="https://img.shields.io/github/stars/pi-hole/pi-hole?style=flat-square" alt="GitHub Repo stars">
+<img src="https://img.shields.io/docker/pulls/pihole/pihole?style=flat-square" alt="Docker Pulls"></p><ul><li>developers are located in the US, Canada, England, Germany and Australia</li><li>has a bigger community, so you can easily find help if you need it</li><li>block-lists and allow-lists are constantly updated and maintained by the maintainers</li></ul><h4 id=adguard>AdGuard</h4><p><img src="https://img.shields.io/github/last-commit/AdguardTeam/AdGuardHome?style=flat-square" alt="GitHub last commit">
+<img src="https://img.shields.io/github/stars/AdguardTeam/AdGuardHome?style=flat-square" alt="GitHub Repo stars">
+<img src="https://img.shields.io/docker/pulls/adguard/adguardhome?style=flat-square" alt="Docker Pulls"></p><ul><li>most of the developers are still located in Moscow (Russia)</li><li>had a cleaner Interface compared to Pi-Hole</li><li>uses fewer resources (RAM)</li><li>support of DNS-Over-HTTPS</li></ul><h3 id=web-interface>Web Interface</h3><p>Pi-Hole and AdGuard have similar-looking main dashboard which is accessed via a web browser. You get to see a few nice graphs and statistics on how well the blockers are performing.</p><div class=row><div class="col col-sm-12 col-lg-6"><h3 id=pi-hole>Pi-Hole</h3><p><img src=./pi-hole.png alt></div><div class="col col-sm-12 col-lg-6"><h3 id=adguard>AdGuard</h3><p><img src=./adguard.png alt></div></div><h3 id=installation>Installation</h3><div class="alert alert-warning"><strong>You must configure your box (or DHCP server) to assign static IP of your DNS-Sinkhole</strong></div><div class=row><div class="col col-sm-12 col-lg-6"><h4 id=pi-hole>Pi-Hole</h4><p><a href=https://docs.pi-hole.net/>More information</a> in official Pi-Hole documentation</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yml data-lang=yml><span style=color:#f92672>version</span>: <span style=color:#e6db74>&#34;3&#34;</span>
+<span style=color:#f92672>services</span>:
+  <span style=color:#f92672>pihole</span>:
+    <span style=color:#f92672>container_name</span>: <span style=color:#ae81ff>pihole</span>
+    <span style=color:#f92672>image</span>: <span style=color:#ae81ff>pihole/pihole</span>
+    <span style=color:#f92672>ports</span>:
+      - <span style=color:#e6db74>&#34;53:53/tcp&#34;</span>
+      - <span style=color:#e6db74>&#34;53:53/udp&#34;</span>
+      - <span style=color:#e6db74>&#34;67:67/udp&#34;</span>
+      - <span style=color:#e6db74>&#34;8000:80/tcp&#34;</span>
+      - <span style=color:#e6db74>&#34;4443:443/tcp&#34;</span>
+    <span style=color:#f92672>environment</span>:
+      <span style=color:#f92672>TZ</span>: <span style=color:#e6db74>&#39;Europe/Paris&#39;</span>
+      <span style=color:#f92672>WEBPASSWORD</span>: <span style=color:#e6db74>&#39;Password used for Web Administration&#39;</span>
+      <span style=color:#f92672>ServerIP</span>: <span style=color:#e6db74>&#39;IP of Pi-Hole&#39;</span>
+    <span style=color:#f92672>volumes</span>:
+      - <span style=color:#e6db74>&#39;./etc-pihole/:/etc/pihole/&#39;</span>
+      - <span style=color:#e6db74>&#39;./etc-dnsmasq.d/:/etc/dnsmasq.d/&#39;</span>
+    <span style=color:#f92672>dns</span>:
+      - <span style=color:#ae81ff>1.1.1.1</span>
+      - <span style=color:#ae81ff>8.8.8.8</span>
+      - <span style=color:#ae81ff>8.8.4.4</span>
+    <span style=color:#f92672>cap_add</span>:
+      - <span style=color:#ae81ff>NET_ADMIN</span>
+    <span style=color:#f92672>restart</span>: <span style=color:#ae81ff>unless-stopped</span>
+</code></pre></div></div><div class="col col-sm-12 col-lg-6"><h4 id=adguard>AdGuard</h4><p><a href=https://kb.adguard.com/en/home/overview>More information</a> in official AdGuard Home documentation</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yml data-lang=yml><span style=color:#f92672>version</span>: <span style=color:#e6db74>&#34;3&#34;</span> 
+<span style=color:#f92672>services</span>:
+  <span style=color:#f92672>adguard</span>:
+    <span style=color:#f92672>container_name</span>: <span style=color:#ae81ff>adguardhome</span>
+    <span style=color:#f92672>image</span>: <span style=color:#ae81ff>adguard/adguardhome</span>
+    <span style=color:#f92672>ports</span>:
+      - <span style=color:#e6db74>&#34;53:53/tcp&#34;</span>
+      - <span style=color:#e6db74>&#34;53:53/udp&#34;</span>
+      - <span style=color:#e6db74>&#34;67:67/udp&#34;</span>
+      - <span style=color:#e6db74>&#34;68:68/tcp&#34;</span>
+      - <span style=color:#e6db74>&#34;68:68/udp&#34;</span>
+      - <span style=color:#e6db74>&#34;8000:80/tcp&#34;</span>
+      - <span style=color:#e6db74>&#34;4443:443/tcp&#34;</span>
+      - <span style=color:#e6db74>&#34;853:853/tcp&#34;</span>
+      - <span style=color:#e6db74>&#34;3000:3000/tcp&#34;</span>
+    <span style=color:#f92672>volumes</span>:
+      - <span style=color:#ae81ff>./workdir:/opt/adguardhome/work</span>
+      - <span style=color:#ae81ff>./confdir:/opt/adguardhome/conf</span>
+    <span style=color:#f92672>dns</span>:
+      - <span style=color:#ae81ff>1.1.1.1</span>
+      - <span style=color:#ae81ff>8.8.8.8</span>
+      - <span style=color:#ae81ff>8.8.4.4</span>
+    <span style=color:#f92672>cap_add</span>:
+      - <span style=color:#ae81ff>NET_ADMIN</span>
+    <span style=color:#f92672>restart</span>: <span style=color:#ae81ff>unless-stopped</span>
+</code></pre></div></div></div><hr><p>Two solutions now, use it as a DHCP server and everything is automatic&mldr;
+Or configure the DNS server on your devices and set IP address of your raspberry.</p><blockquote><p>Personally, I have configured my devices to use the DNS server</p></blockquote><h2 id=feedback>Feedback</h2><p>I was used Pi-Hole during 6 mounth, then AdGuard during 6 mounth.</p><p>The two solution are almost identical, otherwise AdGuard does the job very well, and the interface is even nicer.</p><p>I still prefer AdGuard Home, because DNS-Over-HTTPS is available and easy to set up.</p><p>The &ldquo;problem&rdquo; stems from the <strong>principle of DNS-Sinkhole</strong>. You can&rsquo;t really block all the ads or junk. Because some domains are not dedicated only to advertising or privacy sniffing&mldr; Example with Facebook, Youtube or Google.</p><p>You can block <strong>A LOT</strong> of things. And it is not negligible.</p><p>Today approximately 10-20 percent of DNS requests are refused on my network with AdGuard.</p><div class=row><div class="col col-sm-12 col-lg-6"><p>Ads</p><ul><li>adservice.google.com</li><li>ads.yahoo.com</li><li>&mldr;</li></ul></div><div class="col col-sm-12 col-lg-6"><p>Privacy</p><ul><li>metrics.***.com</li><li>app-measurement.com</li><li>analytics.***.com</li><li>privatestats.whatsapp.net</li><li>&mldr;</li></ul></div></div></div><div class=btn-improve-page><a href=https://github.com/Ealenn/Ealenn/edit//content/posts/raspberry/dns-sinkhole/index.md><i class="fas fa-code-branch"></i>Improve this page</a></div><hr><div class="row next-prev-navigator"></div><hr></div></div></div></section><section class=toc-section id=toc-section><div class=toc-holder><h5 class="text-center pl-3">Table of Contents</h5><hr><div class=toc><nav id=TableOfContents><ul><li><a href=#presentation>Presentation</a><ul><li><a href=#filter-your-dns-queries>Filter your DNS queries</a><ul><li><a href=#dns-sinkhole-list>DNS-Sinkhole List</a></li></ul></li><li><a href=#redundancy-of-dns-servers>Redundancy of DNS servers</a></li></ul></li><li><a href=#concretely>Concretely</a><ul><li><a href=#open-source-leaders>Open Source Leaders</a><ul><li><a href=#pi-hole>Pi-Hole</a></li><li><a href=#adguard>AdGuard</a></li></ul></li><li><a href=#web-interface>Web Interface</a></li><li><a href=#installation>Installation</a></li></ul></li><li><a href=#feedback>Feedback</a></li></ul></nav></div></div></section></div><footer class="container-fluid text-center align-content-center footer pb-2"><div class="container pt-5"><div class="row text-left"><div class="col-md-4 col-sm-12"><h5>Navigation</h5><ul><li class=nav-item><a class=smooth-scroll href=#about>About</a></li><li class=nav-item><a class=smooth-scroll href=#recent-posts>Recent Posts</a></li><li class=nav-item><a class=smooth-scroll href=#projects>Projects</a></li><li class=nav-item><a class=smooth-scroll href=#experiences>Experiences</a></li><li class=nav-item><a class=smooth-scroll href=#education>Education</a></li></ul></div><div class="col-md-4 col-sm-12"><h5>Contact me:</h5><ul><li><span>Email:</span> <span>contact@ealen.dev</span></li></ul></div></div></div><hr><div class=container><div class="row text-left"><div class=col-md-4><a id=theme href=https://github.com/hossainemruz/toha target=#><img src=/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_2.png>
+Toha</a></div><div class="col-md-4 text-center">© 2021 Copyright.</div><div class="col-md-4 text-right"><a id=hugo href=https://gohugo.io/>Powered by
+<img src=/images/hugo-logo.svg alt="Hugo Logo" height=18></a></div></div></div></footer><script src=/js/jquery-3.4.1.min.js></script><script src=/js/popper.min.js></script><script src=/js/bootstrap.min.js></script><script src=/js/navbar.js></script><script src=/js/main.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js></script><script src=/js/single.js></script><script>hljs.initHighlightingOnLoad();</script></body></html>
