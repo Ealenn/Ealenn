@@ -1,4 +1,5 @@
 baseURL: https://ealen.dev
+canonifyURLs: true
 
 languageCode: en-us
 title: "Ealen's Blog"

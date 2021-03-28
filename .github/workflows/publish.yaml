@@ -17,26 +17,8 @@ jobs:
       uses: jakejarvis/hugo-build-action@v0.80.0
       with:
         args: --minify
-    - name: Stop
-      uses: appleboy/ssh-action@master
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
       with:
-        host: ${{ secrets.REMOTE_HOST }}
-        username: ${{ secrets.REMOTE_USER }}
-        password: ${{ secrets.REMOTE_PASSWORD }}
-        script: docker-compose -f ${{ secrets.REMOTE_COMPOSE }} down -v 
-    - name: Copy files
-      uses: appleboy/scp-action@master
-      with:
-        host: ${{ secrets.REMOTE_HOST }}
-        username: ${{ secrets.REMOTE_USER }}
-        password: ${{ secrets.REMOTE_PASSWORD }}
-        source: "./public/*"
-        target: ${{ secrets.REMOTE_TARGET }}
-        rm: true
-    - name: Start
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.REMOTE_HOST }}
-        username: ${{ secrets.REMOTE_USER }}
-        password: ${{ secrets.REMOTE_PASSWORD }}
-        script: docker-compose -f ${{ secrets.REMOTE_COMPOSE }} up -d
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./public
