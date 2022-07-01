@@ -26,7 +26,7 @@ markup:
     ordered: false
 
 # Enable Google Analytics
-googleAnalytics: G-Y39TSSYB9X
+# googleAnalytics: G-Y39TSSYB9X
 
 # Enable global emoji support
 enableEmoji: true

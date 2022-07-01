@@ -10,17 +10,17 @@ menu:
     weight: 10
 ---
 
-An DNS sinkhole that protects your devices from unwanted content, without installing any client-side software.
+DNS sinkhole that protects your devices from unwanted content, without installing any client-side software.
 
 ## Presentation
 
 ### Filter your DNS queries
 
-An DNS querie is used to convert a web address (duckduckgo.com) by an IP address usable by your computer (40.114.177.156)
+DNS querie is used to convert a web address (duckduckgo.com) by an IP address usable by your computer (40.114.177.156)
 
 {{<img src="/posts/raspberry/dns-sinkhole/diagram/dns-query.png" height="342" width="246" align="center" >}}
 
-DNS-Sinkhole is placed between the DNS server, and your client (Computer, TV, tablet, phone etc ...) Depending on the configuration of your DNS-Sinkhole, it can accept the request, or refuse it, based on DNS-Sinkhole List.
+DNS-Sinkhole is placed between the DNS Server, and your client (Computer, TV, Tablet, Phone etc ...) Depending on the configuration of your DNS-Sinkhole, it can accept the request, or refuse it, based on DNS-Sinkhole List.
 
 {{< split 6 6 >}}
 ![](./diagram/allow-list.png)
@@ -63,7 +63,7 @@ AllowList :
 
 ### Redundancy of DNS servers
 
-Another advantage is the multiplication of DNS servers available. If an DNS server is no longer accessible, for example your internet service provider, you switch to another automatically.
+Another advantage is the multiplication of DNS servers available. If any DNS server is no longer accessible, for example your internet service provider, you will switch to another **automatically**.
 
 > Example, in case of DDoS cyberattack [as in 2016 with Dyn](https://en.wikipedia.org/wiki/2016_Dyn_cyberattack), Dyn is not accessible, but CloudFlare is up ! More recently in 2018 with the French internet service provider Free, and they national DNS breakdown.
 
@@ -243,4 +243,3 @@ Privacy
 - privatestats.whatsapp.net
 - ...
 {{< /split >}}
-

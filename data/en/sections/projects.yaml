@@ -21,22 +21,29 @@ projects:
   summary: An echo server is a server that replicates the request sent by the client and sends it back.
   tags: ["tools"]
 
-- name: Templates .NET Core
-  logo: /images/sections/projects/templates-dotnetcore.png
+- name: TypeScript Workspace
+  logo: /images/sections/projects/templates-docker.png
   role: Maintainer
   timeline: "2020 - Present"
-  repo: https://github.com/Ealenn/templates-dotnet
-  summary: .NET Templates with GitHub Actions, Docker and more (API / Jobs / Console / ML) 
+  repo: https://github.com/Ealenn/codespaces-typescript
+  summary: The Visual Studio Code Remote Containers for TypeScript projects
   tags: ["tools"]
 
-- name: Rock Paper Scissors
-  logo: /images/sections/projects/rps.png
+- name: AdGuard-Home-List
+  logo: /images/sections/projects/adguard-home-list.png
   role: Maintainer
-  timeline: "2018"
-  repo: https://github.com/Ealenn/rock-paper-scissors-socket
-  url: https://rock-paper-scissors-socket.herokuapp.com
-  summary: Socket implementation of Rock Paper Scissors game for real time gameplay.
-  tags: ["hobby"]
+  timeline: "2021 - Present"
+  repo: https://github.com/Ealenn/AdGuard-Home-List
+  summary: Varied and carefully selected filter lists and consolidates for use in AdGuard Home.
+  tags: ["hobby", "tools"]
+
+- name: OpenGarden
+  logo: /images/sections/projects/open-garden.png
+  role: Maintainer
+  timeline: "2022 - Present"
+  repo: https://github.com/Ealenn/OpenGarden
+  summary: Garden assistant, for your seedlings and vegetables. Compatible with Home Assistant & Google Home.
+  tags: ["hobby", "tools"]
 
 - name: Bitnami Charts
   logo: /images/sections/projects/bitnami.png
@@ -53,11 +60,3 @@ projects:
   repo: https://github.com/kelseyhightower/nocode
   summary: The best way to write secure and reliable applications. Write nothing; deploy nowhere.
   tags: ["hobby", "fun"]
-
-- name: AdGuard-Home-List
-  logo: /images/sections/projects/adguard-home-list.png
-  role: Maintainer
-  timeline: "2021 - Present"
-  repo: https://github.com/Ealenn/AdGuard-Home-List
-  summary: Varied and carefully selected filter lists and consolidates for use in AdGuard Home.
-  tags: ["hobby", "tools"]
