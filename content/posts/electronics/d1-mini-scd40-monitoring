@@ -1,0 +1,45 @@
+---
+title: "Building a Temperature, Humidity, and CO2 Monitoring System with D1 Mini and SCD40 Sensor using ESPHome and Home Assistant"
+date: 2023-07-18T20:00:00+01:00
+description: how to set up a temperature, humidity, and CO2 monitoring system using the D1 Mini microcontroller and the SCD40 sensor
+menu:
+  sidebar:
+    name: Monitoring-System
+    identifier: monitoring-system
+    parent: electronics
+    weight: 10
+---
+
+## Introduction:
+In this article, we'll explore how to set up a temperature, humidity, and CO2 monitoring system using the D1 Mini microcontroller and the SCD40 sensor.
+We'll cover configuring Home Assistant with ESPHome, the protocol for flashing the ESP, and provide a pin schema for connecting the components.
+Additionally, if you have access to a 3D printer, we'll share a 3D-printed enclosure for this project along with instructions on how to connect the pins.
+
+## Hardware Components:
+To begin, gather the following components:
+- D1 Mini microcontroller board
+- SCD40 sensor (temperature, humidity, and CO2)
+- Jumper wires
+- USB cable for power
+
+Setting up Home Assistant with ESPHome: (see: ...)
+
+## Pin Schema and Connection
+The following pin schema describes how to connect the SCD40 sensor to the D1 Mini:
+
+|D1 Mini | SCD40 Sensor|
+|---|---|
+|3.3V| VCC|
+|GND| GND|
+|D1| SDA|
+|D2| SCL|
+
+## 3D-Printed Enclosure:
+If you have access to a 3D printer, you can use the following instructions to create an enclosure for the D1 Mini and SCD40 sensor:
+
+# Conclusion
+By following the steps outlined in this article, you can easily set up a temperature, humidity, and CO2 monitoring system using the D1 Mini microcontroller and the SCD40 sensor.
+Integrating the project with Home Assistant through ESPHome provides seamless integration into your home automation ecosystem.
+Additionally, the 3D-printed enclosure ensures a neat and organized setup.
+  
+Enjoy monitoring your environment with this DIY project!
