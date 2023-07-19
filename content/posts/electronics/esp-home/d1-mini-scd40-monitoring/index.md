@@ -4,10 +4,10 @@ date: 2023-07-18T20:00:00+01:00
 description: how to set up a temperature, humidity, and CO2 monitoring system using the D1 Mini microcontroller and the SCD40 sensor
 menu:
   sidebar:
-    name: Monitoring-System
+    name: Temperature, Humidity, and CO2 Monitoring System
     identifier: monitoring-system
-    parent: electronics
-    weight: 10
+    parent: esp-home
+    weight: 100000
 ---
 
 ## Introduction:

@@ -4,9 +4,9 @@ date: 2023-07-18T20:00:00+01:00
 description: An DNS sinkhole that protects your devices from unwanted content, without installing any client-side software.
 menu:
   sidebar:
-    name: ESP-Home
-    identifier: esp-home
-    parent: electronics
+    name: Guide to Home Automation
+    identifier: guide-to-home-automation
+    parent: esp-home
     weight: 10
 ---
 
