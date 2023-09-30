@@ -10,6 +10,6 @@ jobs:
       with:
         submodules: recursive
     - name: Build
-      uses: jakejarvis/hugo-build-action@v0.80.0
+      uses: jakejarvis/hugo-build-action@v0.111.3
       with:
         args: --minify --buildDrafts
