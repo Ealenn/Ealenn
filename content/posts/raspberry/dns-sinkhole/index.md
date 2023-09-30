@@ -1,26 +1,40 @@
 ---
 title: "DNS sinkhole, between Privacy and AdBlocker, configuration and feedback"
 date: 2021-01-02T20:00:00+01:00
-description: An DNS sinkhole that protects your devices from unwanted content, without installing any client-side software.
+description: Protect your devices from unwanted content and guard your privacy with a DNS sinkhole, without installing any client-side software.
 menu:
   sidebar:
-    name: DNS-Sinkhole
+    name: DNS Sinkhole
     identifier: dns-sinkhole
     parent: raspberry
     weight: 10
 ---
 
-DNS sinkhole that protects your devices from unwanted content, without installing any client-side software.
+DNS sinkhole technology provides an effective shield against unwanted online content without the hassle of installing client-side software. 
+In this article, we'll explore how DNS sinkholes work, their advantages, and two leading solutions: Pi-Hole and AdGuard.
 
-## Presentation
+## Introduction
 
-### Filter your DNS queries
+### Filtering
 
-DNS querie is used to convert a web address (duckduckgo.com) by an IP address usable by your computer (40.114.177.156)
+Filtering DNS queries plays a role in bolstering online security and safeguarding our digital privacy. 
+
+By intercepting and scrutinizing DNS requests, we can proactively block potential threats and security menaces before they even reach our devices. This not only shields us from malicious websites and phishing attempts but also adds an extra layer of defense against cyberattacks like malware distribution and ransomware. 
+
+Furthermore, DNS filtering empowers individuals to take control of their online privacy by thwarting the data-hungry scripts employed by big companies to harvest and monetize our personal information. By blocking these privacy sniffers, we can reduce the risk of our data being exploited for targeted advertising or other intrusive purposes. 
+
+Last but not least, DNS filtering is a potent tool for eliminating the incessant barrage of ads that clutter our browsing experience. It not only enhances our online efficiency but also minimizes the exposure to potentially deceptive or harmful advertisements. 
+
+In essence, DNS filtering serves as a versatile guardian of our digital world, fortifying our security, preserving our privacy, and decluttering our online landscape.
+
+### DNS Queries
+
+DNS (Domain Name System) queries play a crucial role in converting web addresses (e.g., duckduckgo.com) into IP addresses that your devices can understand (e.g., 40.114.177.156).
 
 {{<img src="/posts/raspberry/dns-sinkhole/diagram/dns-query.png" height="342" width="246" align="center" >}}
 
-DNS-Sinkhole is placed between the DNS Server, and your client (Computer, TV, Tablet, Phone etc ...) Depending on the configuration of your DNS-Sinkhole, it can accept the request, or refuse it, based on DNS-Sinkhole List.
+The DNS sinkhole operates as an intermediary between your DNS server and client devices, such as computers, TVs, tablets, and phones. Depending on your DNS sinkhole's configuration, it can either accept or deny requests based on a DNS Sinkhole List.
+DNS sinkholes categorize queries into two lists: the allowlist and blocklist.
 
 {{< split 6 6 >}}
 ![](./diagram/allow-list.png)
@@ -37,7 +51,7 @@ DNS-Sinkhole is placed between the DNS Server, and your client (Computer, TV, Ta
 
 #### DNS-Sinkhole List
 
-Here is a sample of DNS-Sinkhole List
+Here's a sample of DNS-Sinkhole Lists:
 
 ```sh
 amptrack.dailymail.co.uk #DailyMail Tracker
@@ -49,11 +63,9 @@ atdmt.com #Facebook
 #...
 ```
 
-By default the DNS-Sinkhole uses their own list, but you can add a lot of them, simply with a search on github.
+By default, DNS-Sinkhole employs its own list, but you can easily add more from sources like GitHub. I created my own lists and I share them on GitHub at [Ealenn/AdGuard-Home-List](https://github.com/Ealenn/AdGuard-Home-List), which is suitable for corporate use and combines popular lists.
 
-I share my lists on a GitHub [Ealenn/AdGuard-Home-List](https://github.com/Ealenn/AdGuard-Home-List). **This list can easily be used in corporate.** This is the list that is configured in my home, and I use every day. It brings together the most famous lists.
-
-Once you have AdGuard Home ready and are logged in, use its main menu to add one blocklist and one allowlist.
+To configure AdGuard Home, use its main menu to add one blocklist and one allowlist:
 
 BlockList :
 - https://raw.githubusercontent.com/Ealenn/AdGuard-Home-List/gh-pages/AdGuard-Home-List.Block.txt
@@ -61,11 +73,11 @@ BlockList :
 AllowList :
 - https://raw.githubusercontent.com/Ealenn/AdGuard-Home-List/gh-pages/AdGuard-Home-List.Allow.txt
 
-### Redundancy of DNS servers
+### DNS Server Redundancy
 
-Another advantage is the multiplication of DNS servers available. If any DNS server is no longer accessible, for example your internet service provider, you will switch to another **automatically**.
+Another advantage of DNS sinkholes is the availability of multiple DNS servers.
 
-> Example, in case of DDoS cyberattack [as in 2016 with Dyn](https://en.wikipedia.org/wiki/2016_Dyn_cyberattack), Dyn is not accessible, but CloudFlare is up ! More recently in 2018 with the French internet service provider Free, and they national DNS breakdown.
+If one DNS server becomes inaccessible, your system can automatically switch to another. This redundancy is crucial in scenarios like DDoS attacks, as seen [in the 2016 Dyn cyberattack](https://en.wikipedia.org/wiki/2016_Dyn_cyberattack) and the 2018 French internet service provider Free DNS breakdown.
 
 {{< img src="/posts/raspberry/dns-sinkhole/diagram/multiple-dns.png" height="352" width="437" align="center" >}}
 
@@ -110,9 +122,9 @@ https://doh.opendns.com/dns-query
 ![GitHub Repo stars](https://img.shields.io/github/stars/pi-hole/pi-hole?style=flat-square)
 ![Docker Pulls](https://img.shields.io/docker/pulls/pihole/pihole?style=flat-square)
 
-- developers are located in the US, Canada, England, Germany and Australia
-- has a bigger community, so you can easily find help if you need it
-- block-lists and allow-lists are constantly updated and maintained by the maintainers
+- Maintained by developers from the US, Canada, England, Germany, and Australia
+- Boasts a sizable community for easy support
+- Blocklists and allowlists are regularly updated and maintained by the developers
 
 #### AdGuard
 
@@ -120,14 +132,15 @@ https://doh.opendns.com/dns-query
 ![GitHub Repo stars](https://img.shields.io/github/stars/AdguardTeam/AdGuardHome?style=flat-square)
 ![Docker Pulls](https://img.shields.io/docker/pulls/adguard/adguardhome?style=flat-square)
 
-- most of the developers are still located in Moscow (Russia)
-- had a cleaner Interface compared to Pi-Hole
-- uses fewer resources (RAM)
-- support of DNS-Over-HTTPS
+- Most developers are located in Moscow, Russia
+- Cleaner interface compared to Pi-Hole
+- Utilizes fewer system resources (RAM)
+- Supports DNS-Over-HTTPS
 
 ### Web Interface
 
-Pi-Hole and AdGuard have similar-looking main dashboard which is accessed via a web browser. You get to see a few nice graphs and statistics on how well the blockers are performing.
+Both Pi-Hole and AdGuard offer similar-looking main dashboards accessed via a web browser.
+These dashboards provide useful statistics and graphs regarding the effectiveness of the ad blockers.
 
 {{< split 6 6 >}}
 ### Pi-Hole
@@ -140,13 +153,13 @@ Pi-Hole and AdGuard have similar-looking main dashboard which is accessed via a 
 ### Installation
 
 {{< alert type="warning" >}}
-You must configure your box (or DHCP server) to assign static IP of your DNS-Sinkhole
+**Note**: Ensure your router (or DHCP server) assigns a static IP address to your DNS sinkhole.
 {{< /alert >}}
 
 {{< split 6 6 >}}
 #### Pi-Hole
 
-[More information](https://docs.pi-hole.net/) in official Pi-Hole documentation
+For more information, refer to the official Pi-Hole documentation [here](https://docs.pi-hole.net/).
 
 ``` yml
 version: "3"
@@ -178,7 +191,7 @@ services:
 ---
 #### AdGuard
 
-[More information](https://kb.adguard.com/en/home/overview) in official AdGuard Home documentation
+For more information, refer to the official AdGuard Home documentation [here](https://kb.adguard.com/en/home/overview).
 
 ``` yml
 version: "3" 
@@ -211,24 +224,20 @@ services:
 
 ---
 
-Two solutions now, use it as a DHCP server and everything is automatic... 
-Or configure the DNS server on your devices and set IP address of your raspberry. 
+You have two options for implementation:
+- use it as a DHCP server for automatic configuration 
+- or manually configure the DNS server on your devices to use your Raspberry Pi's IP address.
 
-> Personally, I have configured my devices to use the DNS server
+> **Personally, I've configured my devices to use the DNS server.**
 
 ## Feedback
 
-I was used Pi-Hole during 6 mounth, then AdGuard during 6 mounth.
+After using Pi-Hole for six months and AdGuard for another six months, both solutions proved nearly identical.
+However, AdGuard Home offers a more appealing interface and easy DNS-Over-HTTPS setup.
 
-The two solution are almost identical, otherwise AdGuard does the job very well, and the interface is even nicer.
+It's important to note that DNS sinkholes can't block all ads or junk content, as some domains serve multiple purposes. For now, domains like Facebook, YouTube, or Google can't be entirely blocked without causing functionality issues. 
 
-I still prefer AdGuard Home, because DNS-Over-HTTPS is available and easy to set up.
-
-The "problem" stems from the **principle of DNS-Sinkhole**. You can't really block all the ads or junk. Because some domains are not dedicated only to advertising or privacy sniffing... Example with Facebook, Youtube or Google.
-
-You can block **A LOT** of things. And it is not negligible. 
-
-Today approximately 10-20 percent of DNS requests are refused on my network with AdGuard.
+Nevertheless, DNS sinkholes can effectively block a substantial portion of unwanted content. On my network, with AdGuard, approximately 10-20 percent of DNS requests are refused, effectively blocking ads and enhancing privacy.
 
 {{< split 6 6 >}}
 Ads
