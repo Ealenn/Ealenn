@@ -1,16 +1,16 @@
 name: "Rudy Marchandise"
 nickname: "Rudy"
 
-greeting: "Hi, I am"
+greeting: "Hi, I'm"
 image: "images/author/rudy.jpg"
 
 contactInfo:
   email: "contact@ealen.fr"
 
 summary:
-  - I am a Developer
-  - I love lutti candies
-  - I work on open-source projects
-  - I love to work with some fun projects
-  - I love Linux
-  - I am a devops evangelist
+  - Lutti candies addict
+  - Open-source projects lover
+  - Linux or nothing
+  - Quadrature Net supporter
+  - DevOps Evangelist
+  - ANSSI follower
