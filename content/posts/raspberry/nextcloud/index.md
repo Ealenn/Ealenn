@@ -86,10 +86,8 @@ Moreover, LinuxServer's Docker image goes the extra mile by providing MODS (Modu
 The folder structure you've outlined provides a clear and organized setup. 
 
 Inside the "nextcloud" directory, you've segmented your components into distinct subdirectories, enhancing manageability.
-- The "maria_db" directory likely houses the MariaDB database that Nextcloud relies on to store user data and configurations securely. Separating this component ensures data isolation and efficient database management.
-- The "nextcloud_config" directory is likely where you store your Nextcloud configuration files, making it easy to access and modify Nextcloud settings as needed.
-- The "docker-compose.yml" file is a pivotal piece of the puzzle, as it orchestrates the entire Nextcloud environment using Docker containers. This file defines how your Nextcloud, MariaDB, and any other required services interact, simplifying deployment and maintenance.
-- The ".env" file likely contains environment variables necessary for configuring your Nextcloud and MariaDB containers, streamlining the setup process. 
+- The "maria_db" directory houses the MariaDB database that Nextcloud relies on to store user data and configurations securely. Separating this component ensures data isolation and efficient database management.
+- The "nextcloud_config" directory is where you store your Nextcloud configuration files, making it easy to access and modify Nextcloud settings as needed.
 
 Altogether, this organized folder structure and setup demonstrate a thoughtful approach to creating and maintaining a robust and secure self-hosted Nextcloud instance on your NAS.
 
@@ -101,6 +99,8 @@ nas/
 │  ├─ docker-compose.yml
 │  ├─ .env
 ```
+
+The "**docker-compose.yml**" file is a pivotal piece of the puzzle, as it orchestrates the entire Nextcloud environment using Docker containers. This file defines how your Nextcloud, MariaDB, and any other required services interact, simplifying deployment and maintenance.
 
 ```yml
 version: '3.8'
@@ -143,6 +143,8 @@ services:
       - MYSQL_PASSWORD=$NEXTCLOUD_MYSQL_PASSWORD
 ```
 
+The "**.env**" file likely contains environment variables necessary for configuring your Nextcloud and MariaDB containers, streamlining the setup process. 
+
 ```ini
 NEXTCLOUD_MYSQL_DATABASE=nextcloud
 NEXTCLOUD_MYSQL_USER=nextcloud
@@ -150,13 +152,19 @@ NEXTCLOUD_MYSQL_ROOT_PASSWORD=****************************
 NEXTCLOUD_MYSQL_PASSWORD=****************************
 ```
 
+### Run
+
+```sh
+docker-compose up -d
+```
+
+### Secure Your Instance
+
 By effectively using `chmod`, `chown`, and configuring `PUID` and `PGID` in your Docker Compose file, you can maintain a secure and customized environment for your self-hosted services while ensuring that permissions align with your system's requirements.
 
 I recommend establishing a `docker` group on your server and assigning a unique user for each hosted application within this `docker` group. Employ the `chown` command recursively to grant permissions exclusively to each respective user. In the event of a security breach, this approach confines each application within its designated space, mitigating potential issues.
 
 Additionally, you have the option to configure permissions in a more granular manner, such as providing full permissions to the user, read-only access to the group, and no access to others, thereby enhancing security measures.
-
-### Secure Your Instance
 
 Implement security best practices, such as enabling HTTPS with [Let's Encrypt](https://letsencrypt.org/fr/) and configuring user permissions.
 
