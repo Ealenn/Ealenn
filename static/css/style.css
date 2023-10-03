@@ -1,0 +1,8 @@
+.home {
+  height: 40vh!important;
+  min-height: 500px;
+}
+
+.footer {
+  display: none!important;
+}
