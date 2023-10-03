@@ -2,15 +2,14 @@ section:
   name: About
   id: about
   enable: true
-  weight: 1
-  showOnNavbar: true
+  weight: 2
+  showOnNavbar: false
   template: sections/about.html
 
 designation: Software Engineer 🚀💻
 company:
-  name: Ubisoft.
+  name: Ubisoft
   url: "https://www.ubisoft.com"
-resume: "https://www.linkedin.com/in/rudymarchandise/"
 
 summary: 'Raspberry PI Addict, Linux Lover, Quadrature Net supporter, ANSSI follower. Passionate software engineer with 7 years of working experience. Technology is a passion of mine - DevOps IRL - I’m a Kubernetes lover - Linux or nothing - « Tester c’est douter, de qui tu te mock ? »'
 
@@ -29,22 +28,22 @@ socialLinks:
 
 # give the percentage between 50 to 100 with 5 intervals.
 # currently supported colors: blue, yellow, pink, green, sky, orange
-softSkills:
-- name: Docker/Kube
-  percentage: 75
-  color: '#15a2d6'
-- name: .NET Core
-  percentage: 80
-  color: '#6d409d'
-- name: NodeJS
-  percentage: 65
-  color: '#90c53f'
-- name: DevOps
-  percentage: 80
-  color: '#f05033'
-- name: Fast Learner
-  percentage: 90
-  color: sky
-- name: Problem Solving
-  percentage: 80
-  color: orange
+# softSkills:
+# - name: Docker/Kube
+#   percentage: 75
+#   color: '#15a2d6'
+# - name: .NET Core
+#   percentage: 80
+#   color: '#6d409d'
+# - name: NodeJS
+#   percentage: 65
+#   color: '#90c53f'
+# - name: DevOps
+#   percentage: 80
+#   color: '#f05033'
+# - name: Fast Learner
+#   percentage: 90
+#   color: sky
+# - name: Problem Solving
+#   percentage: 80
+#   color: orange
