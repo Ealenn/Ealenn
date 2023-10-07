@@ -2,7 +2,7 @@ name: "Rudy Marchandise"
 nickname: "Rudy"
 
 greeting: "Salut ! Je suis"
-image: "images/author/rudy.jpg"
+image: "images/author/rudy.webp"
 
 contactInfo:
   email: "contact@ealen.fr"

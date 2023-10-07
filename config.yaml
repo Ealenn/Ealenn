@@ -42,10 +42,10 @@ params:
   gitRepo: https://github.com/ealenn/ealenn
   gitBranch: master
 
-  background: /images/site/background.jpg
+  background: /images/site/background.webp
   logo:
-    main: /images/site/main-logo.png
-    inverted: /images/site/inverted-logo.png
+    main: /images/site/main-logo.webp
+    inverted: /images/site/inverted-logo.webp
     favicon: /images/site/favicon.png
 
   # specify whether you want to write some blog posts or not
