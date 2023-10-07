@@ -6,3 +6,7 @@
 .footer {
   display: none!important;
 }
+
+.project-tags-holder .badge  {
+  display: none!important;
+}
