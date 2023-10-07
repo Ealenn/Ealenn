@@ -10,3 +10,7 @@
 .project-tags-holder .badge  {
   display: none!important;
 }
+
+.top-navbar {
+  font-size: 1.2em;
+}
