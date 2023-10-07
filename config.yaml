@@ -48,14 +48,15 @@ params:
     inverted: /images/site/inverted-logo.webp
     favicon: /images/site/favicon.png
 
-  # specify whether you want to write some blog posts or not
   enableBlogPost: true
-
-  # specify whether you want to show Table of Contents in reading page
   enableTOC: true
-
-  # specify whether you want the language flags to be displayed. 
   showFlags: true
+
+  features:
+    blog:
+      enable: true
+    notes:
+      enable: true
 
   # Provide newsletter configuration. 
   # This feature has been implemented for Mailchimp only for now.
