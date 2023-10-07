@@ -1,0 +1,70 @@
+section:
+  name: Education
+  id: education
+  template: sections/education.html # Use "sections/education-alt.html for alternate template.
+  enable: true
+  weight: 5
+  showOnNavbar: true
+
+degrees:
+- name: Master I & II Cloud Computing & Mobility
+  icon: fa-graduation-cap
+  timeframe: 2016-2018
+  institution:
+    name: Université de Picardie Jules Verne (UPJV)
+    url: "https://www.u-picardie.fr"
+  takenCourses:
+    showGrades: false
+    courses:
+    - name: Development on PAAS / SAAS / IAAS platform (App Engine / Azure / Amazon ..)
+    - name: Docker / Docker Compose
+    - name: Development engineering
+    - name: S.O.L.I.D object development, Design Pattern (Singleton, Façade, Dependency injection, Factory, Trait, Observer, Publish – subscribe ...)
+    - name: Micro Services
+    - name: SQL / NoSQL
+    - name: Continuous integration
+    - name: Load management
+    - name: Architecture / Systems
+    - name: Network / Virtualization (Supervision)
+    - name: Network & infrastructure security
+    - name: Apache and nginx
+    - name: Load-Balancing
+    - name: Certificates and TLS
+    - name: Agile Methods (Scrum, Kamban)
+  extracurricularActivities:
+  - Honorary member of ADESQ Saint-Quentinois Student Association
+
+- name: Licence Web Développeur
+  icon: fa-graduation-cap
+  timeframe: 2015-2016
+  institution:
+    name: INSSET - INstitut Supérieure des Sciences Et Techniques
+    url: "http://www.insset.u-picardie.fr"
+  takenCourses:
+    showGrades: false
+    courses:
+    - name: PHP Expert
+    - name: Modern JavaScript
+    - name: Security
+    - name: Micro Services
+    - name: SQL / NoSQL
+    - name: Design Pattern
+    - name: Java & Android
+    - name: Swift & iOS
+    - name: SEO
+
+- name: B.T.S. Brevet de technicien supérieur - Informatique et réseaux pour l'industrie et les services techniques
+  icon: fa-university
+  timeframe: 2013-2015
+  institution:
+    name: Lycée Pierre Méchain - Laon
+  takenCourses:
+    showGrades: false
+    courses:
+    - name: Computer program in Native Code (C, C ++)
+    - name: C/C++ development with real-time kernel
+    - name: Architecture of computer machines
+    - name: Software engineering workshop
+    - name: Mathematics (Complexes, Matrices, Linearization, ...)
+    - name: Network administration (user accounts in Linux, deployment of a DHCP server, DNS, ...)
+    - name: Secondary School Certificate

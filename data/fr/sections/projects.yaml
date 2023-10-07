@@ -1,0 +1,62 @@
+section:
+  name: Projects
+  id: projects
+  enable: true
+  weight: 3
+  showOnNavbar: true
+  hideTitle: false
+
+# buttons:
+# - name: All
+#   filter: "all"
+
+projects:
+
+- name: Echo-Server
+  logo: /images/sections/projects/echo-server.png
+  role: Créateur
+  timeline: "2019 - Present"
+  repo: https://github.com/Ealenn/Echo-Server
+  url: https://ealenn.github.io/Echo-Server
+  summary: Un echo server  est un serveur qui réplique la requête envoyée par le client et la renvoie.
+  tags: ["tools"]
+
+- name: TypeScript Workspace
+  logo: /images/sections/projects/templates-docker.png
+  role: Créateur
+  timeline: "2020 - Present"
+  repo: https://github.com/Ealenn/codespaces-typescript
+  summary: Conteneurs distants de Visual Studio Code pour les projets TypeScript
+  tags: ["tools"]
+
+- name: AdGuard-Home-List
+  logo: /images/sections/projects/adguard-home-list.png
+  role: Créateur
+  timeline: "2021 - Present"
+  repo: https://github.com/Ealenn/AdGuard-Home-List
+  summary: Des listes de filtres variées et soigneusement sélectionnées et consolidées à utiliser dans AdGuard Home.
+  tags: ["hobby", "tools"]
+
+- name: OpenGarden
+  logo: /images/sections/projects/open-garden.png
+  role: Créateur
+  timeline: "2022 - Present"
+  repo: https://github.com/Ealenn/OpenGarden
+  summary: Assistant de jardinage, pour vos semis et légumes. Compatible avec Home Assistant et Google Home.
+  tags: ["hobby", "tools"]
+
+- name: Bitnami Charts
+  logo: /images/sections/projects/bitnami.png
+  role: Contributeur
+  timeline: "2020 - Present"
+  repo: https://github.com/bitnami/charts
+  summary: Applications populaires, prêtes à être lancées sur Kubernetes à l'aide de Helm.
+  tags: ["hobby"]
+
+- name: Nocode
+  logo: /images/sections/projects/no-code.png
+  role: Rien
+  timeline: "2019 - Present"
+  repo: https://github.com/kelseyhightower/nocode
+  summary: La meilleure façon d'écrire des applications sûres et fiables. N'écrivez rien, ne déployez nulle part.
+  tags: ["hobby", "fun"]
