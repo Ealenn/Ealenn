@@ -55,7 +55,7 @@ Inconvénients :
 
 ## NextCloud 
 
-{{<img src="/posts/raspberry/nextcloud/nextcloud.png" align="center" >}}
+{{<img src="/posts/raspberry/nextcloud/nextcloud.webp" align="center" >}}
 
 [NextCloud](https://nextcloud.com/) est une plateforme de collaboration et de stockage dans le Cloud auto-hébergée et open-source qui combine le meilleur des deux mondes.
 Elle offre la commodité d'une synchronisation de fichiers et d'outils de collaboration basés sur le cloud, tout en vous permettant de garder le contrôle de vos données.

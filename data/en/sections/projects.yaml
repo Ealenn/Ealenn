@@ -13,7 +13,7 @@ section:
 projects:
 
 - name: Echo-Server
-  logo: /images/sections/projects/echo-server.png
+  logo: /images/sections/projects/echo-server.webp
   role: Maintainer
   timeline: "2019 - Present"
   repo: https://github.com/Ealenn/Echo-Server
@@ -22,7 +22,7 @@ projects:
   tags: ["tools"]
 
 - name: TypeScript Workspace
-  logo: /images/sections/projects/templates-docker.png
+  logo: /images/sections/projects/docker.webp
   role: Maintainer
   timeline: "2020 - Present"
   repo: https://github.com/Ealenn/codespaces-typescript
@@ -30,7 +30,7 @@ projects:
   tags: ["tools"]
 
 - name: AdGuard-Home-List
-  logo: /images/sections/projects/adguard-home-list.png
+  logo: /images/sections/projects/adguard-home.webp
   role: Maintainer
   timeline: "2021 - Present"
   repo: https://github.com/Ealenn/AdGuard-Home-List
@@ -38,7 +38,7 @@ projects:
   tags: ["hobby", "tools"]
 
 - name: OpenGarden
-  logo: /images/sections/projects/open-garden.png
+  logo: /images/sections/projects/open-garden.webp
   role: Maintainer
   timeline: "2022 - Present"
   repo: https://github.com/Ealenn/OpenGarden
@@ -46,7 +46,7 @@ projects:
   tags: ["hobby", "tools"]
 
 - name: Bitnami Charts
-  logo: /images/sections/projects/bitnami.png
+  logo: /images/sections/projects/bitnami.webp
   role: Contributor
   timeline: "2020 - Present"
   repo: https://github.com/bitnami/charts
@@ -54,7 +54,7 @@ projects:
   tags: ["hobby"]
 
 - name: Nocode
-  logo: /images/sections/projects/no-code.png
+  logo: /images/sections/projects/no-code.webp
   role: Nothing
   timeline: "2019 - Present"
   repo: https://github.com/kelseyhightower/nocode
