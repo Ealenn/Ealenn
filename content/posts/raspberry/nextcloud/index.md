@@ -74,6 +74,7 @@ Setting up Nextcloud with Docker offers a flexible and customizable solution.
 Docker allows you to encapsulate Nextcloud and its dependencies into containers, making installation and management straightforward.
 
 ### Prerequisites
+
 Ensure you have a server or NAS device capable of running Docker.
 Install Docker on your server or NAS. Follow the official Docker documentation for your platform.
 
@@ -83,7 +84,7 @@ Utilizing [LinuxServer's](https://www.linuxserver.io/) Docker image is a prudent
 
 Moreover, LinuxServer's Docker image goes the extra mile by providing MODS (Modular Object Detection System), an additional layer that equips your self-hosted environment with an array of tools and expanded capabilities. These tools can enhance your cloud storage solution's functionality, security, and monitoring capabilities.
 
-The folder structure you've outlined provides a clear and organized setup. 
+Followed folder structure provide a clear and organized setup :
 
 Inside the "nextcloud" directory, you've segmented your components into distinct subdirectories, enhancing manageability.
 - The "maria_db" directory houses the MariaDB database that Nextcloud relies on to store user data and configurations securely. Separating this component ensures data isolation and efficient database management.
@@ -143,7 +144,7 @@ services:
       - MYSQL_PASSWORD=$NEXTCLOUD_MYSQL_PASSWORD
 ```
 
-The "**.env**" file likely contains environment variables necessary for configuring your Nextcloud and MariaDB containers, streamlining the setup process. 
+The "**.env**" file contains environment variables necessary for configuring your Nextcloud and MariaDB containers, streamlining the setup process. 
 
 ```ini
 NEXTCLOUD_MYSQL_DATABASE=nextcloud

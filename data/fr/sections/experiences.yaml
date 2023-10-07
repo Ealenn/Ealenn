@@ -1,0 +1,50 @@
+section:
+  name: Experiences
+  id: experiences
+  enable: true
+  weight: 4
+  showOnNavbar: true
+  hideTitle: false 
+
+experiences:
+- company:
+    name: Ubisoft
+    url: "https://www.ubisoft.com"
+    location: Bordeaux
+    overview: Ubisoft Entertainment SA est une société française de jeux vidéo qui possède plusieurs studios de développement à travers le monde. Ses franchises de jeux vidéo comprennent Rayman, Lapins Crétins, Prince of Persia, Assassin's Creed, Far Cry, Watch Dogs, Just Dance et la série Tom Clancy's. En mars 2018, Ubisoft est la quatrième société de jeux vidéo cotée en bourse en Amérique et en Europe en termes de chiffre d'affaires et de capitalisation boursière, après Activision Blizzard, Electronic Arts et Take-Two Interactive. 
+  positions:
+  - designation: Online Software Engineer
+    start: Feb 2021
+    responsibilities:
+    - Faire partie d'une équipe investie dans le développement sur des sujets aussi variés et innovants que le Cloud Gaming, le Social, l'expérience Cross-Play, l'engagement des joueurs, etc.
+    - Développer une plateforme et des services en ligne performants en collaboration avec les équipes de production de jeux.
+    - Analyser et concevoir les demandes de fonctionnalités des productions, et leur proposer des solutions réalistes, robustes et réalisables.
+    - Collaborer avec un grand nombre d'équipes dans les studios français, à Montréal et ailleurs dans le monde.
+
+- company:
+    name: Netfective Technology
+    url: "https://www.bluage.com"
+    location: Bordeaux
+    overview: Transformation numérique, Blu Age, Modernisation des applications, Modernisation des logiciels, Migration du code, Virtualisation de l'infrastructure, Modernisation des ordinateurs centraux.
+  positions:
+  - designation: Lead Software Engineer
+    start: 2020
+    end: 2021
+    responsibilities:
+    - Architecture of new services
+    - Implementation of continuous integration and deployment processes
+    - .NET Core, CQRS/ES, RabbitMQ, Kafka, IdentityServer4, Docker
+
+- company:
+    name: Orange Business Services
+    url: "https://www.orange-business.com"
+    location: Bordeaux (Pessac)
+    overview: Orange Business Services, la branche de services aux entreprises d'Orange S.A., est un intégrateur mondial de produits et de services de communication pour les entreprises multinationales.
+  positions:
+  - designation: DevOps Engineer
+    start: 2019
+    end: 2020
+    responsibilities:
+    - Orange / SACe - MyPlace - Azure Kubernetes Service (AKS), Traefik, Kong, Blob Storage, .NetCore, Coravel, MediatR, Helm, DockerInDocker, Kind, Artifactory, Azure DevOps
+    - Banque Casino / CDiscount - CashBack - Azure Kubernetes Service (AKS), Blob Storage, Active Directory, CosmoDB, .NetCore, Akka.net (Akkatecture). Terraform, Gitlab & DockerInDocker.
+    - Gamification - Orange DataShare - NodeJS, Sequelize & tests, Docker & Charts Helm, API Gateway Kong Kubernetes / GKE, OAuth (via JWT)

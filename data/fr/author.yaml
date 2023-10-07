@@ -1,0 +1,16 @@
+name: "Rudy Marchandise"
+nickname: "Rudy"
+
+greeting: "Salut ! Je suis"
+image: "images/author/rudy.jpg"
+
+contactInfo:
+  email: "contact@ealen.fr"
+
+summary:
+  - Accro aux bonbons Lutti
+  - Amateur de projets open-source
+  - Linux or nothing
+  - Supporter de Quadrature Net
+  - Évangéliste DevOps
+  - ANSSI follower
