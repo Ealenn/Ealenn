@@ -3,6 +3,8 @@ title: "Docker-Compose: Redis Cluster"
 weight: 1
 ---
 
+{{< note title="Docker-Compose: Redis Cluster" >}}
+
 ```yml
 version: '3'
 
@@ -68,3 +70,5 @@ services:
       REDIS_CLUSTER_REPLICAS: 1
       REDIS_CLUSTER_CREATOR: 'yes'
 ```
+
+{{< /note >}}
