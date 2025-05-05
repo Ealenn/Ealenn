@@ -1,3 +1,5 @@
-<picture>
-  <img src="https://raw.githubusercontent.com/Ealenn/Ealenn/refs/heads/master/github-metrics.svg" width="100%" />
-</picture>
+<p align="center">
+  <a href="#">
+    <img src="/github-metrics.svg" alt="Metrics" width="100%" />
+  </a>
+</p>
