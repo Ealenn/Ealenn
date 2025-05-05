@@ -15,9 +15,7 @@ jobs:
           user: ealenn
           template: classic
           base: header, activity, community, repositories, metadata
-          config_octicon: yes
           config_timezone: Europe/Paris
-          config_twemoji: yes
           plugin_followup: yes
           plugin_followup_archived: yes
           plugin_followup_sections: repositories
@@ -34,7 +32,6 @@ jobs:
           plugin_languages_threshold: 0%
           plugin_notable: yes
           plugin_notable_from: all
-          plugin_notable_indepth: yes
           plugin_notable_repositories: yes
           plugin_notable_types: commit
           plugin_people: yes
