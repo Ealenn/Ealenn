@@ -30,20 +30,20 @@ jobs:
           plugin_languages_recent_load: 300
           plugin_languages_sections: most-used
           plugin_languages_threshold: 0%
-          plugin_notable: yes
+          plugin_notable: no
           plugin_notable_from: all
-          plugin_notable_repositories: yes
+          plugin_notable_repositories: no
           plugin_notable_types: commit
-          plugin_people: yes
+          plugin_people: no
           plugin_people_limit: 12
           plugin_people_size: 28
           plugin_people_types: followers, following
-          plugin_repositories: yes
+          plugin_repositories: no
           plugin_repositories_order: featured, pinned, starred, random
           plugin_repositories_pinned: 4
           plugin_repositories_starred: 4
           plugin_stars: yes
-          plugin_stars_limit: 3
+          plugin_stars_limit: 2
           plugin_topics: yes
           plugin_topics_limit: 26
           plugin_topics_mode: starred
