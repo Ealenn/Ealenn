@@ -471,7 +471,7 @@
                                     </svg>
                                     <div class="name">
                                         <span>go-task/task</span>
-                                        <span>starred 11 days ago</span>
+                                        <span>starred 12 days ago</span>
                                     </div>
                                 </div>
                                 <div class="field description">A fast, cross-platform build tool inspired by Make, designed for modern workflows.</div>
@@ -521,7 +521,7 @@
             </section>
             <footer>
                 <span>These metrics do not include all private contributions</span>
-                <span>Last updated 15 Mar 2026, 18:34:48 (timezone Europe/Paris) with lowlighter/metrics@3.34.0</span>
+                <span>Last updated 15 Mar 2026, 19:50:46 (timezone Europe/Paris) with lowlighter/metrics@3.34.0</span>
             </footer>
         </div>
         <div xmlns="http://www.w3.org/1999/xhtml" id="metrics-end"></div>
