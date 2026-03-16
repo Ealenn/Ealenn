@@ -418,7 +418,7 @@
                                     </svg>
                                     <div class="name">
                                         <span>lukin/keywind</span>
-                                        <span>starred 7 days ago</span>
+                                        <span>starred 8 days ago</span>
                                     </div>
                                 </div>
                                 <div class="field description">Keywind is a component-based Keycloak Login Theme built with Tailwind CSS</div>
@@ -471,7 +471,7 @@
                                     </svg>
                                     <div class="name">
                                         <span>go-task/task</span>
-                                        <span>starred 12 days ago</span>
+                                        <span>starred 13 days ago</span>
                                     </div>
                                 </div>
                                 <div class="field description">A fast, cross-platform build tool inspired by Make, designed for modern workflows.</div>
@@ -521,7 +521,7 @@
             </section>
             <footer>
                 <span>These metrics do not include all private contributions</span>
-                <span>Last updated 16 Mar 2026, 18:10:23 (timezone Europe/Paris) with lowlighter/metrics@3.34.0</span>
+                <span>Last updated 16 Mar 2026, 20:14:00 (timezone Europe/Paris) with lowlighter/metrics@3.34.0</span>
             </footer>
         </div>
         <div xmlns="http://www.w3.org/1999/xhtml" id="metrics-end"></div>
